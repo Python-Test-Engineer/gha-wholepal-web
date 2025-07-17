@@ -13,19 +13,19 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
-     'react-hooks/rules-of-hooks': [
+      'react-hooks/rules-of-hooks': [
         0,
         { allow: ['useStorage', 'useHttpRequest', 'useCookie'] },
       ],
-      'unused-imports/no-unused-vars': [
-        'warn',
-        {
-          vars: 'all',
-          varsIgnorePattern: '^_',
-          args: 'after-used',
-          argsIgnorePattern: '^_',
-        },
-      ],
+      // 'unused-imports/no-unused-vars': [
+      //   'warn',
+      //   {
+      //     vars: 'all',
+      //     varsIgnorePattern: '^_',
+      //     args: 'after-used',
+      //     argsIgnorePattern: '^_',
+      //   },
+      // ],
     },
   },
 ];
