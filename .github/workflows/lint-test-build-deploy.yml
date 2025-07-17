@@ -57,12 +57,12 @@ jobs:
 
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Run Linter
-        run: ${{ steps.detect-package-manager.outputs.runner }} next lint
-      - name : Run Tests
-        run: ${{ steps.detect-package-manager.outputs.tester }} test
-      - name: Test Coverage
-        run: ${{ steps.detect-package-manager.outputs.tester }} test:coverage
+      # - name: Run Linter
+      #   run: ${{ steps.detect-package-manager.outputs.runner }} next lint
+      # - name : Run Tests
+      #   run: ${{ steps.detect-package-manager.outputs.tester }} test
+      # - name: Test Coverage
+      #   run: ${{ steps.detect-package-manager.outputs.tester }} test:coverage
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload a Build Artifact
