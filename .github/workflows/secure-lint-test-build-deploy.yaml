@@ -67,7 +67,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  Dependency Security Scan
+  # Dependency Security Scan
   dependency-security:
     runs-on: ubuntu-latest
     steps:
