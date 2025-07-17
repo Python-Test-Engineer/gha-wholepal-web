@@ -56,7 +56,7 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: npm clean-install
       # - name: Run Linter
       #   run: ${{ steps.detect-package-manager.outputs.runner }} next lint
       # - name : Run Tests
@@ -64,7 +64,8 @@ jobs:
       # - name: Test Coverage
       #   run: ${{ steps.detect-package-manager.outputs.tester }} test:coverage
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        # run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: npm run build
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.6.2
         with:
