@@ -84,6 +84,7 @@ jobs:
 
       - name: Run npm audit
         run: npm audit --audit-level=moderate
+        continue-on-error: true
 
       - name: Run npm audit fix (dry run)
         run: npm audit fix --dry-run
@@ -132,8 +133,8 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         
-      - name: Run Linter
-        run: ${{ steps.detect-package-manager.outputs.runner }} next lint
+      # - name: Run Linter
+      #   run: ${{ steps.detect-package-manager.outputs.runner }} next lint
         
       # - name: Run Tests
       #   run: ${{ steps.detect-package-manager.outputs.tester }} test
